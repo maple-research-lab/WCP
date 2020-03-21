@@ -22,48 +22,6 @@ class CNN(chainer.Chain):
         self.top_bn = top_bn
         super(CNN, self).__init__()
         with self.init_scope():
-#            self.c1=L.Convolution2D(3, 128, ksize=3, stride=1, pad=1, nobias=True)
-#            
-#            self.rest = chainer.Sequential(
-#                L.BatchNormalization(128),
-#                partial(F.leaky_relu, slope=0.1),
-#                L.Convolution2D(128, 128, ksize=3, stride=1, pad=1, nobias=True),
-#                L.BatchNormalization(128),
-#                partial(F.leaky_relu, slope=0.1),
-#                L.Convolution2D(128, 128, ksize=3, stride=1, pad=1, nobias=True),
-#                L.BatchNormalization(128),
-#                partial(F.leaky_relu, slope=0.1),
-#                partial(F.max_pooling_2d, ksize=2, stride=2),
-#                partial(F.dropout, ratio=self.dropout_rate),
-#                
-#                L.Convolution2D(128, 256, ksize=3, stride=1, pad=1, nobias=True),
-#                L.BatchNormalization(256),
-#                partial(F.leaky_relu, slope=0.1),
-#                L.Convolution2D(256, 256, ksize=3, stride=1, pad=1, nobias=True),
-#                L.BatchNormalization(256),
-#                partial(F.leaky_relu, slope=0.1),
-#                L.Convolution2D(256, 256, ksize=3, stride=1, pad=1, nobias=True),
-#                L.BatchNormalization(256),
-#                partial(F.leaky_relu, slope=0.1),
-#                partial(F.max_pooling_2d, ksize=2, stride=2),
-#                partial(F.dropout, ratio=self.dropout_rate),
-#                
-#                L.Convolution2D(256, 512, ksize=3, stride=1, pad=0, nobias=True),
-#                L.BatchNormalization(512),
-#                partial(F.leaky_relu, slope=0.1),
-#                L.Convolution2D(512, 256, ksize=1, stride=1, pad=0, nobias=True),
-#                L.BatchNormalization(256),
-#                partial(F.leaky_relu, slope=0.1),
-#                L.Convolution2D(256, 128, ksize=1, stride=1, pad=0, nobias=True),
-#                L.BatchNormalization(128),
-#                partial(F.leaky_relu, slope=0.1),
-#                partial(F.average_pooling_2d, ksize=6),
-#                
-#                L.Linear(128, n_outputs),
-#            )
-#            if top_bn:
-#                self.rest.append(L.BatchNormalization(n_outputs))
-                    
             self.c1=L.Convolution2D(3, 128, ksize=3, stride=1, pad=1, nobias=True)
             self.c2=L.Convolution2D(128, 128, ksize=3, stride=1, pad=1, nobias=True)
             self.c3=L.Convolution2D(128, 128, ksize=3, stride=1, pad=1, nobias=True)
