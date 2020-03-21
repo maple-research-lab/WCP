@@ -5,6 +5,14 @@ Source code for "WCP: Worst-Case Perturbations for Semi-Supervised Deep Learning
 In this paper, we present a novel regularization mechanism for training deep networks by minimizing the Worse-Case Perturbation (WCP). It is based on the idea that a robust model is least likely to be affected by small perturbations, such that its output decisions should be as stable as possible on both labeled and unlabeled examples. We will consider two forms of WCP regularizations -- additive and DropConnect perturbations, which impose additive noises on network weights, and make structural changes by dropping the network connections, respectively. We will show that the worse cases of both perturbations can be derived by solving respective optimization problems with spectral methods. The WCP can be minimized on both labeled and unlabeled data so that networks can be trained in a semi-supervised fashion.  This leads to a novel paradigm of semi-supervised classifiers by stabilizing the predicted outputs in presence of the worse-case perturbations imposed on the network weights and structures.
 
 ## Motivation
+| ![Toy example](https://github.com/maple-research-lab/WCP/blob/master/resource/aWCP_ex.png) |
+|:--:| 
+| *(a) toy example of a sigmoid unit for four datapoints* |
+| ![Relation](https://github.com/maple-research-lab/WCP/blob/master/resource/aWCP_relation.png) |
+| *(b) The relation between φ and the correspondingWCP value.  * |
+| *Figure 1. From the “teeth” curve, the minimum WCP regularizer occurs at φ = 0(similary at φ=±π) with the corresponding boundary x1= 0. Two local minima of the WCP regularizer occur at ±π/2, corresponding to x2 = 0.* |
+
+The idea of minimizing the impact of worst-case model perturbation is well connected with the large margin principle, since a maximum-margin classi-fier is least likely to change its predictions whenit is maximally perturbed. In Figure 1, we  use  a  toy  example  to  show  the  insightinto how the WCP regularizes the training of deep net-works. For details, please refer to our paper.
 
 ## Run our codes
 ### Requirements
