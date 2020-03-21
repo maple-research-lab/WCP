@@ -1,0 +1,1 @@
+python train_semisup.py --data_dir=../dataset/cifar10/ --log_dir=./log/cifar10_seed1/ --num_epochs=1000 --epoch_decay_start=800 --aug_flip --aug_trans --epsilon=8.0 --gpu 0 --dataset_seed 1
