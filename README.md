@@ -35,7 +35,7 @@ The idea of minimizing the impact of worst-case model perturbation is well conne
     
 ## Citation
 
-Liheng Zhang, Guo-Jun Qi. WCP: Worst-Case Perturbations for Semi-Supervised Deep Learning in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2020), Seattle, WA, June 16th - June 20th, 2020. 
+Liheng Zhang, Guo-Jun Qi. WCP: Worst-Case Perturbations for Semi-Supervised Deep Learning in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2020), Seattle, WA, June 16th - June 18th, 2020. 
     
 ## Disclaimer
 
