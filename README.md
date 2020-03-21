@@ -6,5 +6,35 @@ In this paper, we present a novel regularization mechanism for training deep net
 
 ## Motivation
 
+## Run our codes
+### Requirements
+- Python == 2.7
+- Chainer == 5.1.0
+
+### CIFAR10
+    cd dataset
+    python cifar10.py
+    cd ..
+    cd WCP
+    python train_semisup.py --data_dir=../dataset/cifar10/ --log_dir=./log/cifar10_seed1/ --num_epochs=1000 --epoch_decay_start=800 --aug_flip --aug_trans --epsilon=8.0 --gpu 0 --dataset_seed 1
+    
+### SVHN
+    cd dataset
+    python svhn.py
+    cd ..
+    cd WCP
+    python train_semisup.py --data_dir=../dataset/svhn/ --log_dir=./log/svhn_seed1/ --num_epochs=500 --epoch_decay_start=400 --epsilon=3.5 --aug_trans --top_bn --gpu 0 --dataset_seed 1
+    
+## Citation
+
+Liheng Zhang, Guo-Jun Qi. WCP: Worst-Case Perturbations for Semi-Supervised Deep Learning in Proceedings of IEEE Conference on Computer Vision and Pattern Recognition (CVPR 2020), Seattle, WA, June 16th - June 20th, 2020. 
+    
+## Disclaimer
+
+Some of our codes reuse the github project [vat_chainer](https://github.com/takerum/vat_chainer).  
+
+## License
+
+This code is released under the MIT License.
 
 
